@@ -1,0 +1,25 @@
+{{ define "title" }}
+    <title>Ichbinjoe - Joe Hirschfeld</title>
+{{ end }}
+
+{{ define "css" }}
+    <link rel='stylesheet' href='/css/style.css'/>
+{{ end }}
+
+{{ define "script" }}
+{{ end }}
+
+<!doctype html>
+<html class="all">
+    <head>
+        {{ template "title" }}
+        {{ template "css" }}
+        {{ template "script" }}
+        <link rel='icon' type='img/ico' href='/imgs/favicon.png'/>
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'/>
+    </head>
+    <body>
+        {{ template "content" }}
+        {{ template "footer" }}
+    </body>
+</html>

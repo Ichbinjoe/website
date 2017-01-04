@@ -1,0 +1,39 @@
+// global font / color / interesting stuff
+$background-color:      #ffffff;
+$text-color:            #303030;
+$unvisited-link-color:  mix($text-color, #0000ff, 40%);
+$visited-link-color:    darken($unvisited-link-color, 10%);
+
+$code-background-color: darken($background-color, 15%);
+
+//$header-font:   'Roboto', sans-serif;
+$header-font:   'Arimo', sans-serif;
+$content-font:  'Arimo', sans-serif;
+$mono-font:     'Roboto Mono', monospace;
+
+// sizing
+
+$paragraph-line-height:     1.4;
+
+$hr-width:                  100%;
+$hr-vert-margin:            1em;
+
+$main-container-width:      60em;
+$main-container-min-width:  25em;
+
+// forms
+
+$button-rounding-radius:    0.5em;
+$button-padding:            0.5em 1em 0.55em;
+$button-border-darken:      18%;
+$button-hover-saturation:   8%;
+$button-active-saturation:  15%;
+
+$input-rounding-radius:     0.5em;
+$input-padding:             0.5em 1em 0.55em;
+
+$label-color:               lighten(black, 40%);
+
+$element-default-color:     #e5e5e5;
+$element-error-color:       #ff1e1e;
+

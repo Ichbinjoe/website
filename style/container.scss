@@ -1,0 +1,24 @@
+@import "constants.scss";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container.global-center {
+    align-items: center;
+    align-content: center;
+}
+
+.readable-width {
+    width: 100%;
+    min-width: $main-container-min-width;
+}
+
+@media (min-width: $main-container-width) {
+    .readable-width {
+        width: $main-container-width;
+    }
+}
+

@@ -1,0 +1,37 @@
+//
+//
+// This file sets very global properties in the css
+//
+//
+
+@import 'constants';
+
+a, body, cite, code, div, h1, h2, h3, h4, h5, kbd, p, pre, samp, var {
+    color: $text-color;
+}
+
+body {
+    background-color: $background-color;
+}
+
+a, body, cite, div, p {
+    font-family: $content-font;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $header-font;
+}
+
+code, kbd, pre, samp, var {
+    font-family: $mono-font
+}
+
+p {
+    line-height: $paragraph-line-height;
+}
+
+hr {
+    width: $hr-width;
+    margin: $hr-vert-margin auto;
+}
+

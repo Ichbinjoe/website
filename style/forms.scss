@@ -1,0 +1,75 @@
+@import "constants.scss";
+@import "mixins.scss";
+
+@mixin button($color: $red, $radius: $button-rounding-radius) {
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    padding: $button-padding;
+    @include rounded($radius);
+    @include ease-in-out(0.05s);
+    border: solid 1px darken($color, $button-border-darken);
+    background-color: $color;
+
+    &:hover {
+        background-color: lighten($color, $button-hover-saturation);
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+        background-color: lighten($color, $button-active-saturation);
+    }
+}
+
+button {
+    float: left; // to kick elements to same line if possible. can/should be overridden 
+    @include button($element-default-color);
+}
+
+button.error {
+    @include button($element-error-color);
+}
+
+$fancy-blue: rgba(81, 203, 238, 1);
+
+input[type=text], input:not([type]), textarea {
+    @include ease-in-out(); 
+    display: block;
+    padding: $input-padding;
+    border: 1px solid lighten(black, 20%);
+    outline: none;
+    margin: 0.25em 0;
+    @include rounded($input-rounding-radius);
+}
+
+input[type=text][error], input:not([type])[error], textarea[error] {
+    box-shadow: 0 0 $input-rounding-radius $element-error-color;
+    border: 1px solid $element-error-color;
+}
+
+form label, form span {
+    display: inline;
+    float: right;
+    font-size: 80%;
+    color: $label-color;
+}
+
+input[type=text]:focus, input:not([type]):focus, textarea:focus {
+    border: 1px solid $fancy-blue;
+    box-shadow: 0 0 $input-rounding-radius $fancy-blue;
+}
+
+.form-group {
+    @include clearfix();
+    display: inline-block;
+}
+
+span.error {
+    color: $element-error-color;
+}
+
+span.form-group {
+    display: inline-block;
+}
